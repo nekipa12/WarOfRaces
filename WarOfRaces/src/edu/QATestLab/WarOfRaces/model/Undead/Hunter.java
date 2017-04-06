@@ -4,10 +4,10 @@ import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 
 public class Hunter extends RaceOfUndead {
 
-	private byte damageFirst;
-	private byte damageSecond;
+	private float damageFirst;
+	private float damageSecond;
 	
-	public Hunter(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public Hunter(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 		this.damageFirst = damageFirst;
 		this.damageSecond = damageSecond;
@@ -15,12 +15,12 @@ public class Hunter extends RaceOfUndead {
 
 	@Override
 	public void attackFirst(Unit u) {
-		u.setHp((byte) (u.getHp() - damageFirst));
+		u.setHp((float) (u.getHp() - damageFirst));
 	}
 
 	@Override
 	public void attackSecond(Unit u) {
-		u.setHp((byte) (u.getHp() - damageSecond));
+		u.setHp((float) (u.getHp() - damageSecond));
 	}
 
 	

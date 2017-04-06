@@ -2,25 +2,25 @@ package edu.QATestLab.WarOfRaces.model.Elves;
 
 public class Warrior extends RaceOfElves{
 	
-	private byte damageSecond;
+	private float damageSecond;
 	
 	
-	public byte getDamageSecond() {
+	public float getDamageSecond() {
 		return damageSecond;
 	}
 
-	public void setDamageSecond(byte damageSecond) {
+	public void setDamageSecond(float damageSecond) {
 		this.damageSecond = damageSecond;
 	}
 
-	public Warrior(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public Warrior(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 		this.damageSecond = damageSecond;
 	}
 
 	@Override
 	public void attackFirst(Unit u) {
-		u.setHp((byte) (u.getHp() - damageSecond));
+		u.setHp((float) (u.getHp() - damageSecond));
 	}
 
 	@Override

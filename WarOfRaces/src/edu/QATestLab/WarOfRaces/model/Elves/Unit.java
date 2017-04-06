@@ -2,24 +2,24 @@ package edu.QATestLab.WarOfRaces.model.Elves;
 
 
 public class Unit implements Attack{
-	private byte hp;
+	private float hp;
 	private String name;
-	private byte damageFirst;
-	private byte damageSecond;
+	private float damageFirst;
+	private float damageSecond;
 	
-	public byte getDamageFirst() {
+	public float getDamageFirst() {
 		return damageFirst;
 	}
 
-	public void setDamageFirst(byte damageFirst) {
+	public void setDamageFirst(float damageFirst) {
 		this.damageFirst = damageFirst;
 	}
 
-	public byte getDamageSecond() {
+	public float getDamageSecond() {
 		return damageSecond;
 	}
 
-	public void setDamageSecond(byte damageSecond) {
+	public void setDamageSecond(float damageSecond) {
 		this.damageSecond = damageSecond;
 	}
 
@@ -27,15 +27,15 @@ public class Unit implements Attack{
 		return name;
 	}
 
-	public byte getHp() {
+	public float getHp() {
 		return hp;
 	}
 
-	public void setHp(byte hp) {
+	public void setHp(float hp) {
 		this.hp = hp;
 	}
 
-	public Unit(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public Unit(float hp, String name, float damageFirst, float damageSecond) {
 		this.hp = hp;
 		this.name = name;
 		this.damageFirst = damageFirst;

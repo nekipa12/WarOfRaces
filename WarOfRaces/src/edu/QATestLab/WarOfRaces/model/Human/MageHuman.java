@@ -5,32 +5,32 @@ import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 
 public class MageHuman extends RaceOfHuman {
 	
-	private byte damageSecond;
+	private float damageSecond;
 	
 	
 	
-	public byte getDamageSecond() {
+	public float getDamageSecond() {
 		return damageSecond;
 	}
 
-	public void setDamageSecond(byte damageSecond) {
+	public void setDamageSecond(float damageSecond) {
 		this.damageSecond = damageSecond;
 	}
 
-	public MageHuman(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public MageHuman(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 		this.damageSecond = damageSecond;
 	}
 
 	@Override
 	public void attackFirst(Unit u) {
-		u.setDamageFirst((byte) (u.getDamageFirst() * 1.5));
-		u.setDamageSecond((byte) (u.getDamageSecond() * 1.5));
+		u.setDamageFirst((float) (u.getDamageFirst() * 1.5));
+		u.setDamageSecond((float) (u.getDamageSecond() * 1.5));
 	}
 
 	@Override
 	public void attackSecond(Unit u) {
-		u.setHp((byte) (u.getHp() - damageSecond));
+		u.setHp((float) (u.getHp() - damageSecond));
 	}
 	
 	

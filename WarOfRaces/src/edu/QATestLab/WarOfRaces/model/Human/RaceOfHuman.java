@@ -4,7 +4,7 @@ import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 
 public class RaceOfHuman extends Unit{
 
-	public RaceOfHuman(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public RaceOfHuman(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 	}
 

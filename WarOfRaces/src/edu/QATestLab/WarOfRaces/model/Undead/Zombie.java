@@ -4,16 +4,16 @@ import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 
 public class Zombie extends RaceOfUndead {
 
-	private byte damageSecond;
+	private float damageSecond;
 	
-	public Zombie(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public Zombie(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 		this.damageSecond = damageSecond;
 	}
 
 	@Override
 	public void attackFirst(Unit u) {
-		u.setHp((byte) (u.getHp() - damageSecond));
+		u.setHp((float) (u.getHp() - damageSecond));
 	}
 
 	@Override

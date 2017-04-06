@@ -4,7 +4,7 @@ import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 
 public class Shaman extends RaceOfOrcs {
 
-	public Shaman(byte hp, String name, byte damageFirst, byte damageSecond) {
+	public Shaman(float hp, String name, float damageFirst, float damageSecond) {
 		super(hp, name, damageSecond, damageSecond);
 	}
 
