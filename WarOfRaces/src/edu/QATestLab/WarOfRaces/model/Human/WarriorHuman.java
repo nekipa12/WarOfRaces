@@ -1,12 +1,10 @@
 package edu.QATestLab.WarOfRaces.model.Human;
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
-public class WarriorHuman extends RaceOfHuman{
+public class WarriorHuman extends RaceOfHuman {
 	
 	private float damageSecond;
-	
-	
 	
 	public float getDamageSecond() {
 		return damageSecond;
@@ -30,6 +28,4 @@ public class WarriorHuman extends RaceOfHuman{
 	public void attackSecond(Unit u) {
 		attackFirst(u);
 	}
-
-	
 }

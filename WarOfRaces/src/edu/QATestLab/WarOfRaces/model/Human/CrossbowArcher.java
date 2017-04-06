@@ -1,14 +1,11 @@
 package edu.QATestLab.WarOfRaces.model.Human;
 
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
-
-public class CrossbowArcher extends RaceOfHuman{
+public class CrossbowArcher extends RaceOfHuman {
 	
 	private float damageFirst;
 	private float damageSecond;
-	
-	
 	
 	public float getDamageFirst() {
 		return damageFirst;
@@ -41,7 +38,4 @@ public class CrossbowArcher extends RaceOfHuman{
 	public void attackSecond(Unit u) {
 		u.setHp((float) (u.getHp() - damageSecond));
 	}
-
-
-
 }

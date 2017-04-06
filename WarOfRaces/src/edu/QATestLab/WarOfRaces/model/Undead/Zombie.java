@@ -1,6 +1,6 @@
 package edu.QATestLab.WarOfRaces.model.Undead;
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
 public class Zombie extends RaceOfUndead {
 
@@ -20,6 +20,4 @@ public class Zombie extends RaceOfUndead {
 	public void attackSecond(Unit u) {
 		attackFirst(u);
 	}
-
-	
 }

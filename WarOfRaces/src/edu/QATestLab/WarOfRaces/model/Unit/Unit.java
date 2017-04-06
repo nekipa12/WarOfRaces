@@ -1,7 +1,6 @@
-package edu.QATestLab.WarOfRaces.model.Elves;
+package edu.QATestLab.WarOfRaces.model.Unit;
 
-
-public class Unit implements Attack{
+public class Unit implements Attack {
 	private float hp;
 	private String name;
 	private float damageFirst;
@@ -49,38 +48,10 @@ public class Unit implements Attack{
 
 	@Override
 	public void attackFirst(Unit u) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void attackSecond(Unit u) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-}
-
-/*
-public class BattleUnit extends Unit {
-	@Override
-	public void attacFirst() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void attacSecond() {
-		// TODO Auto-generated method stub
-		
 	}
 }
-
-public class MageBattleUnit extends BattleUnit {
-	public void spell() {
-		
-	}
-}
-*/
 

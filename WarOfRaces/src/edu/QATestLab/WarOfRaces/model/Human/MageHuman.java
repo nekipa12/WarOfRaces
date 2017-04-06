@@ -1,7 +1,7 @@
 package edu.QATestLab.WarOfRaces.model.Human;
 
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
 public class MageHuman extends RaceOfHuman {
 	
@@ -23,27 +23,7 @@ public class MageHuman extends RaceOfHuman {
 	}
 
 	@Override
-	public void attackFirst(Unit u) {
-		u.setDamageFirst((float) (u.getDamageFirst() * 1.5));
-		u.setDamageSecond((float) (u.getDamageSecond() * 1.5));
-	}
-
-	@Override
 	public void attackSecond(Unit u) {
 		u.setHp((float) (u.getHp() - damageSecond));
 	}
-	
-	
-
-	
-	
-
-	
-
-
-
-	
-	
-	
-
 }

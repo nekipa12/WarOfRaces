@@ -2,11 +2,8 @@ package edu.QATestLab.WarOfRaces.controller;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import edu.QATestLab.WarOfRaces.model.Elves.Archer;
 import edu.QATestLab.WarOfRaces.model.Elves.Mage;
-import edu.QATestLab.WarOfRaces.model.Elves.RaceOfElves;
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 import edu.QATestLab.WarOfRaces.model.Elves.Warrior;
 import edu.QATestLab.WarOfRaces.model.Human.CrossbowArcher;
 import edu.QATestLab.WarOfRaces.model.Human.MageHuman;
@@ -17,6 +14,7 @@ import edu.QATestLab.WarOfRaces.model.Orcs.Shaman;
 import edu.QATestLab.WarOfRaces.model.Undead.Hunter;
 import edu.QATestLab.WarOfRaces.model.Undead.Necromancer;
 import edu.QATestLab.WarOfRaces.model.Undead.Zombie;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
 public class Teams {
 	
@@ -34,7 +32,6 @@ public class Teams {
 	}
 
 	private void makeTeams() {
-		
 		alElvesTeam.add(new Mage(100, "Mage", 0, 10));
 		alElvesTeam.add(new Archer(100, "Archer1", 7, 3));
 		alElvesTeam.add(new Archer(100, "Archer2", 7, 3));
@@ -72,7 +69,7 @@ public class Teams {
 		alUndeadsTeam.add(new Zombie(100, "Zombie4", 0, 18));
 	}
 	
-	public ArrayList<Unit> addTeamOpponents1(){
+	public ArrayList<Unit> addTeamOpponents1() {
 		ArrayList<ArrayList<Unit>> alu = new ArrayList<>();
 		alu.add(alElvesTeam);
 		alu.add(alHumanTeam);
@@ -80,12 +77,11 @@ public class Teams {
 		return alu.get(rnd.nextInt(2));
 	}
 	
-	public ArrayList<Unit> addTeamOpponents2(){
+	public ArrayList<Unit> addTeamOpponents2() {
 		ArrayList<ArrayList<Unit>> alu = new ArrayList<>();
 		alu.add(alOrcsTeam);
 		alu.add(alUndeadsTeam);
 		Random rnd = new Random();
 		return alu.get(rnd.nextInt(2));
 	}
-
 }

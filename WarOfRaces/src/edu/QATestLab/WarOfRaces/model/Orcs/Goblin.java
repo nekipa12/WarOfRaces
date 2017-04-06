@@ -1,12 +1,10 @@
 package edu.QATestLab.WarOfRaces.model.Orcs;
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
 public class Goblin extends RaceOfOrcs {
 	
 	private float damageSecond;
-	
-	
 	
 	public float getDamageSecond() {
 		return damageSecond;
@@ -30,6 +28,4 @@ public class Goblin extends RaceOfOrcs {
 	public void attackSecond(Unit u) {
 		attackFirst(u);
 	}
-
-	
 }

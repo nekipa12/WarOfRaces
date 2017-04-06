@@ -1,9 +1,10 @@
 package edu.QATestLab.WarOfRaces.model.Elves;
 
-public class Warrior extends RaceOfElves{
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
+
+public class Warrior extends RaceOfElves {
 	
 	private float damageSecond;
-	
 	
 	public float getDamageSecond() {
 		return damageSecond;

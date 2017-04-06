@@ -1,17 +1,21 @@
 package edu.QATestLab.WarOfRaces.controller;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-
 import edu.QATestLab.WarOfRaces.model.Elves.Mage;
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
 import edu.QATestLab.WarOfRaces.model.Human.MageHuman;
 import edu.QATestLab.WarOfRaces.model.Orcs.Shaman;
 import edu.QATestLab.WarOfRaces.model.Undead.Necromancer;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
+import edu.QATestLab.WarOfRaces.view.ViewProcess;
 
 public class Game {
+	
 	private Teams t;
+	private ViewProcess vp;
 	private ArrayList<Unit> teamFirst;
 	private ArrayList<Unit> teamSecond;
 	private Random rnd;
@@ -22,6 +26,7 @@ public class Game {
 	
 	public Game() {
 		t = new Teams();
+		vp = new ViewProcess();
 		teamFirst = new ArrayList<>();
 		teamSecond = new ArrayList<>();
 		rnd = new Random();
@@ -37,6 +42,20 @@ public class Game {
 			if (teamSecond.isEmpty() || teamFirst.isEmpty()) break;
 			chooseWhoFirst();
 		}
+		outLogs();
+	}
+
+	private void outLogs() {
+		
+		for (String log : vp.getAls()) {
+			try (FileWriter fw = new FileWriter("./Results/book.txt", true)) {
+				fw.write(log + "\r\n");
+				fw.flush();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 	private void chooseWhoFirst() {
@@ -52,8 +71,10 @@ public class Game {
 	}
 
 	private void teamSecondAction() {
+		int count = 0;
 		Collections.shuffle(teamSecond);
 		if (!privilegedGroupForTeamSecond.isEmpty()) {
+			count++;
 			int idx = rnd.nextInt(teamFirst.size());
 			if (rnd.nextInt(2) == 1) {
 				privilegedGroupForTeamSecond.get(0).attackFirst(teamFirst.get(idx));
@@ -73,10 +94,9 @@ public class Game {
 		}
 		Unit un = null;
 		if (!privilegedGroupForTeamSecond.isEmpty()) {
-			dellSkillS();
+			dellSkill(privilegedGroupForTeamSecond);
 			un = privilegedGroupForTeamSecond.get(0);
 			privilegedGroupForTeamSecond.remove(0);
-			teamSecond.add(un);
 		}
 		while (true) {
 			for (Unit u : teamSecond) {
@@ -98,7 +118,7 @@ public class Game {
 				} else {
 					if (u instanceof Shaman) {
 						if (!privilegedGroupForTeamFirst.isEmpty()) {
-							dellSkillF();
+							dellSkill(privilegedGroupForTeamFirst);
 							System.out.println(u.getName()+ "\t" + "снял улучшение с" + "\t" + privilegedGroupForTeamFirst.get(0).getName());
 							Unit uni = privilegedGroupForTeamFirst.get(0);
 							privilegedGroupForTeamFirst.remove(0);
@@ -120,12 +140,17 @@ public class Game {
 			System.out.println();
 			break;
 		}
-		addSkillS();
+		if (count == 1) {
+			teamSecond.add(un);
+		}
+		addSkill(privilegedGroupForTeamSecond, teamSecond);
 	}
 
 	private void teamFirstAction() {
+		int count = 0;
 		Collections.shuffle(teamFirst);
 		if (!privilegedGroupForTeamFirst.isEmpty()) {
+			count++;
 			int idx = rnd.nextInt(teamSecond.size());
 			if (rnd.nextInt(2) == 1) {
 				privilegedGroupForTeamFirst.get(0).attackFirst(teamSecond.get(idx));
@@ -142,10 +167,9 @@ public class Game {
 		}
 		Unit un = null;
 		if (!privilegedGroupForTeamFirst.isEmpty()) {
-			dellSkillF();
+			dellSkill(privilegedGroupForTeamFirst);
 			un = privilegedGroupForTeamFirst.get(0);
 			privilegedGroupForTeamFirst.remove(0);
-			teamFirst.add(un);
 		}
 		while (true) {
 			for (Unit u : teamFirst) {
@@ -172,6 +196,9 @@ public class Game {
 			}
 			break;
 		}
+		if (count == 1) {
+			teamFirst.add(un);
+		}
 		if (!ill.isEmpty()) {
 			for (Unit unit : ill) {
 				unit.setDamageFirst(unit.getDamageFirst() * 2);
@@ -179,35 +206,21 @@ public class Game {
 			}
 			ill.clear();
 		}
-		addSkillF();
+		addSkill(privilegedGroupForTeamFirst, teamFirst);
 		System.out.println();
 	}
 
-	private void addSkillS() {
-		if (!privilegedGroupForTeamSecond.isEmpty()) {
-			privilegedGroupForTeamSecond.get(0).setDamageFirst((float) (privilegedGroupForTeamSecond.get(0).getDamageFirst() * 1.5));
-			privilegedGroupForTeamSecond.get(0).setDamageSecond((float) (privilegedGroupForTeamSecond.get(0).getDamageSecond() * 1.5));
-			teamSecond.remove(privilegedGroupForTeamSecond.get(0));
-		}
-	}
-
-	private void addSkillF() {
-		if (!privilegedGroupForTeamFirst.isEmpty()) {
-			privilegedGroupForTeamFirst.get(0).setDamageFirst((float) (privilegedGroupForTeamFirst.get(0).getDamageFirst() * 1.5));
-			privilegedGroupForTeamFirst.get(0).setDamageSecond((float) (privilegedGroupForTeamFirst.get(0).getDamageSecond() * 1.5));
-			teamFirst.remove(privilegedGroupForTeamFirst.get(0));
+	private void addSkill(ArrayList<Unit> privilegedGroupForTeams, ArrayList<Unit> teams) {
+		if (!privilegedGroupForTeams.isEmpty()) {
+			privilegedGroupForTeams.get(0).setDamageFirst((float) (privilegedGroupForTeams.get(0).getDamageFirst() * 1.5));
+			privilegedGroupForTeams.get(0).setDamageSecond((float) (privilegedGroupForTeams.get(0).getDamageSecond() * 1.5));
+			teams.remove(privilegedGroupForTeams.get(0));
 		}
 	}
 	
-	private void dellSkillS() {
-		privilegedGroupForTeamSecond.get(0).setDamageFirst( (float) (privilegedGroupForTeamSecond.get(0).getDamageFirst() / 1.5));
-		privilegedGroupForTeamSecond.get(0).setDamageSecond( (float) (privilegedGroupForTeamSecond.get(0).getDamageSecond() / 1.5));
-		
-	}
-	
-	private void dellSkillF() {
-		privilegedGroupForTeamFirst.get(0).setDamageFirst( (float) (privilegedGroupForTeamFirst.get(0).getDamageFirst() / 1.5));
-		privilegedGroupForTeamFirst.get(0).setDamageSecond( (float) (privilegedGroupForTeamFirst.get(0).getDamageSecond() / 1.5));
+	private void dellSkill(ArrayList<Unit> privilegedGroupForTeams) {
+		privilegedGroupForTeams.get(0).setDamageFirst( (float) (privilegedGroupForTeams.get(0).getDamageFirst() / 1.5));
+		privilegedGroupForTeams.get(0).setDamageSecond( (float) (privilegedGroupForTeams.get(0).getDamageSecond() / 1.5));
 	}
 
 	private void add() {

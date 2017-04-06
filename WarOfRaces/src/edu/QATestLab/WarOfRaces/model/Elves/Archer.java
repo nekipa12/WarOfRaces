@@ -1,12 +1,12 @@
 package edu.QATestLab.WarOfRaces.model.Elves;
 
-public class Archer extends RaceOfElves{
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
+
+public class Archer extends RaceOfElves {
 	
 	private float damageFirst;
 	private float damageSecond;
 	
-	
-
 	public float getDamageFirst() {
 		return damageFirst;
 	}
@@ -31,12 +31,12 @@ public class Archer extends RaceOfElves{
 
 	@Override
 	public void attackFirst(Unit u) {
-		u.setHp((u.getHp() - damageFirst));
+		u.setHp(u.getHp() - damageFirst);
 	}
 
 	@Override
 	public void attackSecond(Unit u) {
-		u.setHp((byte) (u.getHp() - damageSecond));
+		u.setHp(u.getHp() - damageSecond);
 	}
 	
 

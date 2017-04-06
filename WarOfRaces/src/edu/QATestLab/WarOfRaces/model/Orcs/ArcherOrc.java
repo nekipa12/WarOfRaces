@@ -1,13 +1,11 @@
 package edu.QATestLab.WarOfRaces.model.Orcs;
 
-import edu.QATestLab.WarOfRaces.model.Elves.Unit;
+import edu.QATestLab.WarOfRaces.model.Unit.Unit;
 
 public class ArcherOrc extends RaceOfOrcs {
 	
 	private float damageFirst;
 	private float damageSecond;
-	
-	
 	
 	public float getDamageFirst() {
 		return damageFirst;
@@ -40,8 +38,4 @@ public class ArcherOrc extends RaceOfOrcs {
 	public void attackSecond(Unit u) {
 		u.setHp((float) (u.getHp() - damageSecond));
 	}
-
-
-	
-
 }
