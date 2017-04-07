@@ -1,2 +1,188 @@
-ffff
-ssss
+STEP 1
+Warrior3(100.0)	attacked	Hunter2(85.0)
+Warrior1(100.0)	attacked	Zombie4(85.0)
+Archer3(100.0)	attacked	Hunter1(93.0)
+Archer2(100.0)	attacked	Zombie2(93.0)
+Archer1(100.0)	attacked	Zombie3(93.0)
+Warrior4(100.0)	attacked	Hunter1(78.0)
+Mage	improvement on	Warrior1
+Warrior2(100.0)	attacked	Zombie1(85.0)
+STEP 2
+Warrior1(100.0)	attacked	Hunter2(62.5)
+Archer3(100.0)	attacked	Hunter3(97.0)
+Mage	improvement on	Mage
+Archer2(100.0)	attacked	Hunter3(94.0)
+Warrior2(100.0)	attacked	Hunter1(63.0)
+Warrior4(100.0)	attacked	Hunter2(47.5)
+Archer1(100.0)	attacked	Hunter1(60.0)
+Warrior3(100.0)	attacked	Hunter1(45.0)
+STEP 3
+Mage(100.0)	attacked	Zombie4(85.0)
+Warrior1(100.0)	attacked	Hunter2(32.5)
+Warrior3(100.0)	attacked	Zombie4(70.0)
+Archer1(100.0)	attacked	Hunter2(25.5)
+Archer2(100.0)	attacked	Hunter2(22.5)
+Warrior2(100.0)	attacked	Zombie2(78.0)
+Warrior4(100.0)	attacked	Hunter1(30.0)
+Archer3(100.0)	attacked	Hunter3(87.0)
+STEP 4
+Hunter2(22.5)	attacked	Archer3(96.0)
+Zombie1(85.0)	attacked	Archer2(82.0)
+Hunter3(87.0)	attacked	Archer2(80.0)
+Zombie3(93.0)	attacked	Archer3(78.0)
+Zombie4(70.0)	attacked	Warrior2(82.0)
+Hunter1(30.0)	attacked	Mage(98.0)
+Zombie2(78.0)	attacked	Archer3(60.0)
+Necromancer(100.0)	attacked	Archer2(75.0)
+STEP 5
+Zombie4(70.0)	attacked	Archer2(57.0)
+Necromancer	ill on	Warrior4
+Hunter1(30.0)	attacked	Warrior4(98.0)
+Zombie3(93.0)	attacked	Warrior2(64.0)
+Zombie1(85.0)	attacked	Warrior2(46.0)
+Hunter2(22.5)	attacked	Archer1(98.0)
+Zombie2(78.0)	attacked	Warrior4(80.0)
+Hunter3(87.0)	attacked	Warrior2(44.0)
+STEP 6
+Mage(98.0)	attacked	Zombie2(68.0)
+Archer3(60.0)	attacked	Zombie3(90.0)
+Warrior3(100.0)	attacked	Zombie4(55.0)
+Warrior4(80.0)	attacked	Zombie2(60.5)
+Archer1(98.0)	attacked	Hunter2(19.5)
+Archer2(57.0)	attacked	Zombie1(82.0)
+Warrior1(100.0)	attacked	Hunter1(15.0)
+Warrior2(44.0)	attacked	Zombie4(40.0)
+STEP 7
+Zombie4(40.0)	attacked	Warrior1(82.0)
+Zombie2(60.5)	attacked	Archer2(39.0)
+Hunter2(19.5)	attacked	Warrior4(78.0)
+Hunter3(87.0)	attacked	Warrior2(40.0)
+Zombie3(90.0)	attacked	Mage(80.0)
+Zombie1(82.0)	attacked	Warrior3(82.0)
+Necromancer(100.0)	attacked	Archer2(34.0)
+Hunter1(15.0)	attacked	Warrior4(76.0)
+STEP 8
+Zombie3(90.0)	attacked	Warrior4(58.0)
+Zombie1(82.0)	attacked	Warrior1(64.0)
+Hunter2(19.5)	attacked	Warrior3(80.0)
+Zombie4(40.0)	attacked	Warrior3(62.0)
+Necromancer(100.0)	attacked	Warrior1(59.0)
+Hunter1(15.0)	attacked	Archer1(94.0)
+Hunter3(87.0)	attacked	Archer2(32.0)
+Zombie2(60.5)	attacked	Archer2(14.0)
+STEP 9
+Hunter1(15.0)	attacked	Archer3(58.0)
+Hunter2(19.5)	attacked	Warrior1(55.0)
+Zombie2(60.5)	attacked	Warrior3(44.0)
+Necromancer(100.0)	attacked	Archer1(89.0)
+Zombie4(40.0)	attacked	Warrior4(40.0)
+Zombie1(82.0)	attacked	Mage(62.0)
+Hunter3(87.0)	attacked	Archer2(12.0)
+Zombie3(90.0)	attacked	Warrior3(26.0)
+STEP 10
+Hunter1(15.0)	attacked	Archer2(10.0)
+Hunter2(19.5)	attacked	Mage(60.0)
+Zombie1(82.0)	attacked	Warrior3(8.0)
+Hunter3(87.0)	attacked	Mage(56.0)
+Zombie3(90.0)	killed	Archer2
+Zombie4(40.0)	attacked	Archer3(40.0)
+Zombie2(60.5)	attacked	Mage(38.0)
+Necromancer(100.0)	attacked	Warrior1(50.0)
+STEP 11
+Archer1(89.0)	attacked	Zombie3(87.0)
+Archer3(40.0)	attacked	Hunter1(12.0)
+Warrior4(40.0)	attacked	Zombie4(25.0)
+Warrior2(40.0)	attacked	Hunter2(4.5)
+Mage	improvement on	Warrior3
+Warrior3(8.0)	killed	Hunter1
+Warrior1(50.0)	killed	Hunter2
+STEP 12
+Warrior3(8.0)	attacked	Zombie1(59.5)
+Warrior1(50.0)	attacked	Zombie2(45.5)
+Archer3(40.0)	attacked	Zombie1(52.5)
+Mage(38.0)	attacked	Hunter3(77.0)
+Archer1(89.0)	attacked	Zombie3(84.0)
+Warrior4(40.0)	attacked	Zombie1(37.5)
+Warrior2(40.0)	attacked	Zombie1(22.5)
+STEP 13
+Warrior2(40.0)	attacked	Zombie4(10.0)
+Mage(38.0)	attacked	Zombie3(74.0)
+Warrior3(8.0)	attacked	Zombie1(7.5)
+Warrior4(40.0)	attacked	Zombie2(30.5)
+Archer1(89.0)	attacked	Hunter3(70.0)
+Warrior1(50.0)	killed	Zombie4
+Archer3(40.0)	attacked	Zombie2(27.5)
+STEP 14
+Archer1(89.0)	attacked	Zombie3(71.0)
+Mage	improvement on	Warrior3
+Warrior3(8.0)	attacked	Hunter3(55.0)
+Warrior1(50.0)	attacked	Zombie3(56.0)
+Warrior2(40.0)	attacked	Zombie3(41.0)
+Warrior4(40.0)	attacked	Necromancer(85.0)
+Archer3(40.0)	attacked	Necromancer(82.0)
+STEP 15
+Hunter3(55.0)	attacked	Mage(36.0)
+Zombie3(41.0)	attacked	Archer1(71.0)
+Zombie1(7.5)	attacked	Warrior4(22.0)
+Necromancer(82.0)	attacked	Warrior4(17.0)
+Zombie2(27.5)	attacked	Archer3(22.0)
+STEP 16
+Necromancer(82.0)	attacked	Warrior1(45.0)
+Hunter3(55.0)	attacked	Mage(34.0)
+Zombie2(27.5)	killed	Warrior4
+Zombie3(41.0)	attacked	Archer3(4.0)
+Zombie1(7.5)	attacked	Mage(16.0)
+STEP 17
+Warrior3(8.0)	attacked	Zombie1(-15.0)
+Warrior3(8.0)	killed	Zombie1
+Mage(16.0)	attacked	Zombie3(31.0)
+Archer3(4.0)	attacked	Zombie3(28.0)
+Warrior1(45.0)	attacked	Zombie2(12.5)
+Archer1(71.0)	attacked	Necromancer(79.0)
+Warrior2(40.0)	attacked	Zombie3(13.0)
+STEP 18
+Archer1(71.0)	attacked	Zombie3(10.0)
+Warrior2(40.0)	attacked	Hunter3(40.0)
+Warrior3(8.0)	attacked	Necromancer(64.0)
+Mage(16.0)	attacked	Necromancer(54.0)
+Archer3(4.0)	attacked	Necromancer(47.0)
+Warrior1(45.0)	killed	Zombie3
+STEP 19
+Necromancer(47.0)	attacked	Warrior2(35.0)
+Hunter3(40.0)	attacked	Warrior1(43.0)
+Zombie2(12.5)	killed	Warrior3
+STEP 20
+Archer3(4.0)	attacked	Necromancer(44.0)
+Archer1(71.0)	attacked	Zombie2(9.5)
+Mage	improvement on	Archer1
+Warrior2(35.0)	attacked	Hunter3(25.0)
+Warrior1(43.0)	attacked	Hunter3(10.0)
+STEP 21
+Zombie2(9.5)	attacked	Warrior2(17.0)
+Hunter3(10.0)	attacked	Warrior1(39.0)
+Necromancer(44.0)	killed	Archer3
+STEP 22
+Necromancer(44.0)	attacked	Warrior2(12.0)
+Zombie2(9.5)	killed	Warrior2
+Hunter3(10.0)	attacked	Warrior1(35.0)
+STEP 23
+Archer1(71.0)	attacked	Hunter3(-0.5)
+Archer1(71.0)	killed	Hunter3
+Mage	improvement on	Mage
+Warrior1(35.0)	attacked	Necromancer(29.0)
+STEP 24
+Mage(16.0)	attacked	Necromancer(14.0)
+Warrior1(35.0)	killed	Zombie2
+Archer1(71.0)	attacked	Necromancer(11.0)
+STEP 25
+Necromancer	ill on	Archer1
+STEP 26
+Necromancer(11.0)	attacked	Warrior1(30.0)
+STEP 27
+Necromancer(11.0)	attacked	Mage(11.0)
+STEP 28
+Necromancer	ill on	Archer1
+STEP 29
+Archer1(71.0)	attacked	Necromancer(10.25)
+Mage	improvement on	Warrior1
+Warrior1(30.0)	killed	Necromancer
